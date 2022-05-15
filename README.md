@@ -1,2 +1,2 @@
-# templates
-Repository made to store templates
+# RocketCoffee
+A homepage for a coffee brand
