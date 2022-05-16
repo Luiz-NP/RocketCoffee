@@ -6,19 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
     <title>RocketCoffee</title>
   </head>
   <body>
-    <div class="content">
-      <header>
-        <img class="logo" src="./assets/logo-mobile.svg" alt="logo" />
+    <nav>
+      <img class="logo" src="./assets/logo-mobile.svg" alt="logo" />
 
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Recompensas</a></li>
+        <li><a href="#">Gift Cards</a></li>
+        <li><a href="#">Lojas</a></li>
+      </ul>
+
+      <button onclick="openMenu()" class="open-menu">
         <img
-          class="menu-burger"
           src="./assets/menu-buguer-open.svg"
-          alt="menu buguer"
+          alt="botão de abrir o menu buguer"
         />
-      </header>
-    </div>
+      </button>
+      <button onclick="closeMenu()" class="close-menu">
+        <img
+          src="./assets/menu-buguer-close.svg"
+          alt="botão de fechar o menu burger"
+        />
+      </button>
+    </nav>
+
+    <script src="./main.js"></script>
   </body>
 </html>
