@@ -1,2 +1,3 @@
 # RocketCoffee
-A homepage for a coffee brand
+
+- A homepage for a coffee brand
