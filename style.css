@@ -9,6 +9,7 @@
 :root {
   --bg-color: hsl(0, 0%, 0%);
   --border-color: hsl(240, 6%, 17%);
+  --purple-border: hsl(258, 73%, 62%);
 
   --title-color: hsl(240, 9%, 89%);
   --text-color: hsl(240, 7%, 68%);
@@ -19,12 +20,13 @@
   font-family: 'Manrope';
 }
 
-body {
+html {
   width: 42.8rem;
-  height: 92.6rem;
+}
 
+body {
   font-size: 1.6rem;
-  background-color: var(--bg-color);
+  background: radial-gradient(circle at bottom, #996DFF -55%, black 40%);
   margin-inline: auto;
 
   overflow: overlay;
@@ -37,6 +39,10 @@ ul {
 a {
   text-decoration: none;
   color: var(--text-color);
+}
+
+button {
+  cursor: pointer;
 }
 
 /*========== NAVIGATION ==========*/
@@ -156,3 +162,85 @@ body.menu-expanded .menu li:hover > a {
 
   transition: .2s;
 }
+
+/*========== MAIN ==========*/
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 18.4rem;
+}
+
+main p {
+  width: 37.3rem;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 4.1rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: white;
+}
+
+main button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background: none;
+  border: 1px solid #8257E5;
+  border-radius: .6rem;
+
+  color: white;
+
+  padding-block: 1rem;
+  padding-inline: 3rem;
+
+  margin-top: 8.8rem;
+  
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+main button svg {
+  position: relative;
+  bottom: .5px;
+}
+
+main button:hover {
+  filter: brightness(1.4);
+  background-color: #8257e51f;
+  transition: 500ms;
+}
+
+main .titles {
+  margin-top: 9.8rem;
+  text-align: center;
+}
+
+main .titles h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6.8rem;
+  letter-spacing: -0.03em;
+
+  color: #FFFFFF;
+}
+
+main .titles h2 {
+  font-weight: 700;
+  font-size: 5rem;
+  line-height: 6.8rem;
+
+  letter-spacing: -0.03em;
+
+  text-shadow: -1px -1px 0 var(--purple-border), 1px -1px 0 var(--purple-border), -1px 1px 0 var(--purple-border), 1px 1px 0 var(--purple-border);
+}
+
+main img {
+  margin-top: 2.5rem;
+  width: 100%;
+}
+
