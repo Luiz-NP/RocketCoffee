@@ -20,14 +20,13 @@
   font-family: 'Manrope';
 }
 
+body,
 html {
-  width: min(42.8rem, 100%);
+  width: 100%;
 }
 
 body {
-  background: radial-gradient(circle at bottom, #996DFF -55%, black 40%);
-  margin-inline: auto;
-
+  background: radial-gradient(circle at bottom, #996DFF -55%, black 50%);
   overflow: overlay;
 }
 
@@ -42,6 +41,32 @@ a {
 
 button {
   cursor: pointer;
+}
+
+.get-coffee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background: none;
+  border: 1px solid #8257E5;
+  border-radius: .6rem;
+
+  color: white;
+
+  padding-block: 1rem;
+  padding-inline: 3rem;
+  
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+.get-coffee:hover {
+  filter: brightness(1.5);
+  background-color: rgba(0, 0, 0, 0.404);
+  transition: 500ms;
 }
 
 /*========== NAVIGATION ==========*/
@@ -83,6 +108,10 @@ nav .close-menu {
   border: none;
   background: none;
 
+  display: none;
+}
+
+nav .get-coffee {
   display: none;
 }
 
@@ -178,7 +207,7 @@ main {
 }
 
 main p {
-  width: min(37.3rem, 100%);
+  width: 100%;
   font-weight: 600;
   font-size: 3.5rem;
   line-height: 4.1rem;
@@ -187,37 +216,8 @@ main p {
   color: white;
 }
 
-main button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-
-  background: none;
-  border: 1px solid #8257E5;
-  border-radius: .6rem;
-
-  color: white;
-
-  padding-block: 1rem;
-  padding-inline: 3rem;
-
+main .get-coffee {
   margin-top: 8.8rem;
-  
-  font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: 0.02em;
-}
-
-main button svg {
-  position: relative;
-  bottom: .5px;
-}
-
-main button:hover {
-  filter: brightness(1.4);
-  background-color: #8257e51f;
-  transition: 500ms;
 }
 
 main .titles {
@@ -244,8 +244,100 @@ main .titles h2 {
   text-shadow: -1px -1px 0 var(--purple-border), 1px -1px 0 var(--purple-border), -1px 1px 0 var(--purple-border), 1px 1px 0 var(--purple-border);
 }
 
-main img {
+main .coffee-cups {
   margin-top: 2.5rem;
   width: 100%;
+  background: none;
 }
 
+/*========== MEDIA ==========*/
+
+@media(min-width: 918px) {
+
+/*========== GERAL ==========*/
+  html {
+    width: 100%; 
+  }
+
+  body {
+    background: url(./assets/blur-1.png) no-repeat left bottom, url(./assets/blur-2.png) no-repeat right top var(--bg-color);
+  }
+
+/*========== NAV ==========*/
+
+  nav#navigation *:not(.get-coffee){
+    margin: 0;
+    padding: 0;
+    display: initial;
+    visibility: visible;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    transform: initial;
+  }
+
+  nav#navigation {
+    top: 5rem;
+    
+    width: min(91.8rem, 100%);
+    height: 5rem;
+
+    margin-inline: auto;
+
+    border: none;
+  }
+
+  nav#navigation .menu {
+    display: flex;
+    gap: 3.243rem;
+
+    position: relative;
+    bottom: 2rem;
+  }
+
+  nav#navigation .menu li a{
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.02em;
+  }
+
+  nav#navigation .menu li a:hover{
+    font-weight: 700;
+  }
+
+  nav#navigation .get-coffee {
+    display: flex;
+    position: relative;
+    bottom: 2rem;
+  }
+
+  nav#navigation .open-menu,
+  nav#navigation .close-menu {
+    display: none;
+  }
+
+/*========== MAIN ==========*/
+
+  main .titles {
+    margin-top: 0;
+  }
+
+  main .titles h1,
+  main .titles h2 {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 109px;
+    letter-spacing: -0.03em;
+  }
+
+  main p,
+  main .get-coffee {
+    display: none;
+  }
+
+  main .coffee-cups {
+    width: min(79.878rem, 100%);
+  }
+
+}
